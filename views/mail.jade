@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  form#formSendMail(name="sendmail",method="post",action="/sendmail")
+      input#inputFromEmail(type="text", placeholder="Your email", name="fromemail")
+      br 
+      input#inputFromEmailPassword(type="password", placeholder="Your password", name="fromemailpassword")
+      br
+      input#inputToEmail(type="text", placeholder="Email", name="toemail")
+      br
+      input#inputSubject(type="text", placeholder="Subject", name="subject" )
+      br
+      input#inputBody(type="text", placeholder="Body", name="body")
+      br
+      button#btnSubmit(type="submit") submit
